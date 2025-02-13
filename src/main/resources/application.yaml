@@ -1,0 +1,10 @@
+
+spring:
+  application:
+    name: Crypto
+
+server:
+  port: 8099
+crypto:
+  urls:
+    urlAnyCrypto: https://api.coingecko.com/api/v3/coins/markets?vs_currency=usd

@@ -1,0 +1,148 @@
+body {
+  font-family: 'Poppins', sans-serif;
+  background: linear-gradient(135deg, #f0f4f8, #d9e2ec);
+  color: #333;
+  margin: 0;
+  padding: 20px;
+}
+
+.filter-container {
+  background: #ffffff;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  margin-bottom: 20px;
+}
+
+.filter-container form {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  align-items: center;
+}
+
+.filter-container input,
+.filter-container select {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-size: 14px;
+  transition: all 0.3s ease;
+  background: #f8f9fa;
+}
+
+.filter-container input:focus,
+.filter-container select:focus {
+  border-color: #007bff;
+  background: #ffffff;
+  outline: none;
+}
+
+.filter-buttons {
+  display: flex;
+  gap: 10px;
+}
+
+.filter-buttons button {
+  background: linear-gradient(135deg, #007bff, #0056b3);
+  color: white;
+  border: none;
+  padding: 10px 15px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+  font-weight: bold;
+  text-transform: uppercase;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+.filter-buttons button:hover {
+  background: linear-gradient(135deg, #0056b3, #004494);
+}
+
+.filter-buttons button[type="button"] {
+  background: linear-gradient(135deg, #6c757d, #545b62);
+}
+
+.filter-buttons button[type="button"]:hover {
+  background: linear-gradient(135deg, #545b62, #3e444a);
+}
+
+.crypto-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 10px;
+  background: #ffffff;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.crypto-table th,
+.crypto-table td {
+  padding: 12px;
+  text-align: left;
+  border-bottom: 1px solid #ddd;
+}
+
+.crypto-table th {
+  background: linear-gradient(135deg, #f1f3f5, #dee2e6);
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+.error-message {
+  background: #f8d7da;
+  color: #721c24;
+  padding: 12px;
+  border-radius: 8px;
+  margin-top: 10px;
+  font-weight: bold;
+}
+
+.pagination-buttons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  margin-top: 15px;
+}
+
+.pagination-buttons button {
+  background: linear-gradient(135deg, #007bff, #0056b3);
+  color: white;
+  border: none;
+  padding: 8px 12px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+  font-weight: bold;
+}
+
+.pagination-buttons button:disabled {
+  background: #ccc;
+  cursor: not-allowed;
+}
+
+.pagination-buttons button:hover:not(:disabled) {
+  background: linear-gradient(135deg, #0056b3, #004494);
+}
+
+.loading-indicator {
+  text-align: center;
+  font-size: 18px;
+  font-weight: bold;
+  color: #007bff;
+}
+
+@media (max-width: 768px) {
+  .filter-container form {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .crypto-table th,
+  .crypto-table td {
+    padding: 10px;
+  }
+}
