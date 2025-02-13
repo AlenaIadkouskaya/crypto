@@ -1,1 +1,1 @@
-Fronend src/main/resources/crypto-angular
+Frontend src/main/resources/crypto-angular
