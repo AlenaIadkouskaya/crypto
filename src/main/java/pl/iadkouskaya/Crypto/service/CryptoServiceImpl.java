@@ -2,6 +2,7 @@ package pl.iadkouskaya.Crypto.service;
 
 import com.fasterxml.jackson.core.type.TypeReference;
 import com.fasterxml.jackson.databind.ObjectMapper;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Service;
 import pl.iadkouskaya.Crypto.dto.Crypto;
@@ -16,13 +17,24 @@ import java.util.stream.Collectors;
 
 @Service
 public class CryptoServiceImpl implements CryptoService {
-    private final HttpClient httpClient;
-    private final ObjectMapper objectMapper;
+    private HttpClient httpClient;
+    private ObjectMapper objectMapper;
 
+    public CryptoServiceImpl() {
+    }
+    @Autowired
     public CryptoServiceImpl(HttpClient httpClient, ObjectMapper objectMapper) {
         this.httpClient = httpClient;
         this.objectMapper = objectMapper;
     }
+
+    public CryptoServiceImpl(HttpClient httpClient, ObjectMapper objectMapper,
+                             @Value("${crypto.urls.urlAnyCrypto}") String urlAnyCrypto) {
+        this.httpClient = httpClient;
+        this.objectMapper = objectMapper;
+        this.urlAnyCrypto = urlAnyCrypto;
+    }
+
 
     @Value("${crypto.urls.urlAnyCrypto}")
     private String urlAnyCrypto;
